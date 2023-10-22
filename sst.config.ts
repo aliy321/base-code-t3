@@ -13,7 +13,7 @@ export default {
       const site = new NextjsSite(stack, "site", {
         environment: {
           DATABASE_URL: process.env.DATABASE_URL!,
-          VERCEL_URL: process.env.VERCEL_URL!,
+          NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL!,
         },
       });
 
