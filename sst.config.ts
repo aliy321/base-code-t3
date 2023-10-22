@@ -4,7 +4,7 @@ import { NextjsSite } from "sst/constructs";
 export default {
   config(_input) {
     return {
-      name: "base-code",
+      name: "base-code-t3",
       region: 'ap-southeast-1',
     };
   },
