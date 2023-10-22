@@ -18,8 +18,9 @@ export default {
         },
       });
 
+      stack.addOutputs({
         SiteUrl: site.url,
       });
     });
   },
-} satisfies SSTConfig;
+} as SSTConfig;
