@@ -11,7 +11,7 @@ function getBaseUrl() {
   if (typeof window !== "undefined") {
     baseUrl = "";
   } else if (process.env.NEXT_PUBLIC_APP_URL) {
-    baseUrl = `https://${process.env.NEXT_PUBLIC_APP_URL}`;
+    baseUrl = `${process.env.NEXT_PUBLIC_APP_URL}`;
   } else {
     baseUrl = `http://localhost:${process.env.PORT ?? 3000}`;
   }
