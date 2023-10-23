@@ -11,9 +11,10 @@ export default {
   stacks(app) {
     app.stack(function Site({ stack }) {
       const site = new NextjsSite(stack, "site", {
+        edge: true,
+        bind: [],
         environment: {
           DATABASE_URL: process.env.DATABASE_URL!,
-          NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL!,
         },
       });
 

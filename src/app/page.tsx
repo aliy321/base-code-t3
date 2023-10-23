@@ -49,15 +49,12 @@ export default async function Home() {
 }
 
 async function CrudShowcase() {
-  const latestPost = await api.post.getAll.query();
+  const latestPost = await api.post.getLatest.query();
 
   return (
     <div className="w-full max-w-xs">
       {latestPost ? (
-        <ul className="">Your most recent post: {latestPost.map((item, key) => (
-          <li key={key}>{item.name}</li>
-        ))}
-        </ul>
+        <p className="truncate">Your most recent post: {latestPost.name}</p>
       ) : (
         <p>You have no posts yet.</p>
       )}
